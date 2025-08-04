@@ -65,6 +65,12 @@
   -webkit-appearance: none;
   -moz-appearance: textfield;
   appearance: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.input:focus{
+  outline: none;
 }
 
 .input::-webkit-outer-spin-button,
