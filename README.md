@@ -35,9 +35,8 @@ src
 │   └── index.js - основной скрипт
 ├── components 
 │   └── progress - компонент прогресса
-│       ├── progress.html
-│       ├── progress.css
-│       └── progress.js
+│       ├── progress.css - стили компонента прогресса
+│       └── progress.js - шаблон генирации компонента прогресса
 ├── pages 
 │   └──  example.html - страница с примером использования
 └── styles
