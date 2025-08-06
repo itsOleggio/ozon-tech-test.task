@@ -14,8 +14,9 @@ export class ProgressComponent {
     }
 
     async _render() {
-        const response = await fetch('/src/components/progress/progress.html');
-        const html = await response.text();
+        const path = new URL('./progress.html', import.meta.url);
+        const html = await fetch(path).then(response => response.text());
+
 
         this.wrapper = document.createElement('div');
         this.wrapper.classList.add('progress');
