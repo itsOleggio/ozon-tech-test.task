@@ -30,6 +30,7 @@ _Опционально добавил дополнительные методы
 
 ```
 src
+├── index.html - главная страница
 ├── app
 │   └── index.js - основной скрипт
 ├── components 
@@ -38,8 +39,7 @@ src
 │       ├── progress.css
 │       └── progress.js
 ├── pages 
-│   ├── example.html - страница с примером использования
-│   └── index.html - главная страница
+│   └──  example.html - страница с примером использования
 └── styles
     ├── example.css - стили для примера
     └── style.css - общие стили
