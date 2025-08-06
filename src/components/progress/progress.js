@@ -14,9 +14,36 @@ export class ProgressComponent {
     }
 
     async _render() {
-        const path = new URL('./progress.html', import.meta.url);
-        const html = await fetch(path).then(response => response.text());
+        const html = `
+        <div class="status_bar">
+            <div class="status_bar__item">
+                <div class="status_bar__item__block"></div>
+            </div>
+        </div>
 
+        <div class="input_area">
+            <div class="input_area_block">
+                <label class="input_area_block__label">
+                    <input type="number" class="input">
+                    <span>Value</span>
+                </label>
+            </div>
+            <div class="input_area_block">
+                <label class="switch">
+                    <input type="checkbox" class="checkbox" id="animate">
+                    <span class="slider"></span>
+                </label>
+                <span>Animate</span>
+            </div>
+            <div class="input_area_block">
+                <label class="switch">
+                    <input type="checkbox" class="checkbox" id="hide">
+                    <span class="slider"></span>
+                </label>
+                <span>Hide</span>
+            </div>
+        </div>
+        `;
 
         this.wrapper = document.createElement('div');
         this.wrapper.classList.add('progress');
