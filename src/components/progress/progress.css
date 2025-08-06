@@ -153,7 +153,7 @@ input:checked + .slider::before {
   display: none;
 }
 
-@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 960px) and (orientation: landscape) {
   .progress {
     flex-direction: row;
   }
