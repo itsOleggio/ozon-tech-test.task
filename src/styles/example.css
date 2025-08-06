@@ -1,0 +1,85 @@
+:root {
+  --main-color: #005BFF;
+  --main-color-light: #e6f0ff;
+  --border-radius: 12px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  padding: 2rem;
+  max-width: 500px;
+  margin: auto;
+  background: #f9fbff;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  color: var(--main-color);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--main-color);
+  border-radius: var(--border-radius);
+  background: white;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 4px var(--main-color-light);
+}
+
+#progress-container {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  background: var(--main-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #0040cc;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.submit_button{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.options {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}

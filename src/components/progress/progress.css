@@ -10,7 +10,7 @@
   width: 125px;
   height: 125px;
   border-radius: 50%;
-  background: conic-gradient(#005BFF 270deg, #EFF3F6 0deg);
+  background: conic-gradient(#005BFF 1deg, #EFF3F6 0deg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,3 +124,41 @@ input:checked + .slider {
 input:checked + .slider::before {
   transform: translateX(30px);
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.status_bar__item.animate {
+  animation: spin 1s linear infinite;
+}
+
+.status_bar__item.hide {
+  display: none;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_area:not(.visible) {
+  display: none;
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .progress {
+    flex-direction: row;
+  }
+}
+
+
+
+

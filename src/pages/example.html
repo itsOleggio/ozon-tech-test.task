@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ПРИМЕР: Форма с прогрессом</title>
+  <link rel="stylesheet" href="/src/styles/style.css">
+  <link rel="stylesheet" href="/src/components/progress/progress.css">
+  <link rel="stylesheet" href="/src/styles/example.css">
+</head>
+<body>
+<div id="progress-container"></div>
+<h1>Заполните все поля, чтобы получить выгоду!</h1>
+<form id="form">
+  <label for="name">Имя</label>
+  <input type="text" id="name" name="name" placeholder="Имя">
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="Email">
+
+  <label for="phone">Телефон</label>
+  <input type="tel" id="phone" name="phone" placeholder="Телефон">
+
+  <button type="submit" class="submit_button">Получить выгоду</button>
+</form>
+
+
+<script type="module">
+    import {ProgressComponent} from '/src/components/progress/progress.js';
+
+    document.addEventListener("DOMContentLoaded", async () => {
+        const progress = await ProgressComponent.create({
+            root: document.getElementById('progress-container')
+        });
+
+        const form = document.getElementById('form');
+        const inputs = Array.from(form.querySelectorAll('input'));
+
+        const updateProgress = () => {
+            const filled = inputs.filter(input => input.value.trim() !== '').length;
+            const percent = Math.round((filled / inputs.length) * 100);
+            progress.setValue(percent);
+        };
+
+        inputs.forEach(input => {
+            input.addEventListener('input', updateProgress);
+        });
+
+        progress.setValue(0);
+        progress.setAnimated(false);
+        progress.setHidden(false);
+
+        progress.setMenuVisible(false);
+    });
+</script>
+</body>
+</html>
