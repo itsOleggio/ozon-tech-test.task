@@ -9,10 +9,10 @@
 ##  Демо
 
 Доступно по ссылке:  
-- 
+- https://itsoleggio.github.io/ozon-tech-test.task/
 
 Пример использования:
-- 
+- https://itsoleggio.github.io/ozon-tech-test.task/src/pages/example.html
 
 ## Функциональные требования
 
